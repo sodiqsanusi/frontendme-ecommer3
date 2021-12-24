@@ -1,0 +1,138 @@
+/* Main CSS reset here, just some minor resetting tho */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans';
+}
+body{
+  overflow: hidden;
+}
+p{
+  font-size: 16px;
+}
+img{
+  width: 100%;
+}
+/* Some designs to all buttons to make them interactive */
+button{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}button:hover,
+button:focus{
+ transform: scale(.8);
+ opacity: 40%;
+}
+/* =========================================================
+  All CSS that changes the header part of the website directly
+ ===========================================================*/
+header{
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header--divider{
+  display: flex;
+  width: 25%;
+  align-items: center;
+  justify-content: space-between;
+}
+.header--divider:first-of-type{
+  width: 50%;
+}.header--divider:first-of-type img{
+  width: 80%;
+}
+.header--taptargets{
+  width: 30%;
+}
+
+#avatarimagediv{
+  width: 40%;
+}
+/* ====================================================================
+  The navigation pane for smallscreen devices, all CSS regarding it here
+ ====================================================================  */
+#mobilenav{
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  background-image: linear-gradient( to right, #fff 65%, rgba(0,0,0,0.627)35%);
+  position: absolute;
+  padding: 2.5em 2em;
+  transition: .5s linear;
+  transform: translateX(-100%);
+  z-index: 44;
+}
+#mobilenav button{
+  transition: .3s;
+}
+
+#mobilenav ul{
+  list-style-type: none;
+  font-size: 1.5rem;
+  margin-top: 1em;
+  line-height: 2;
+}
+#mobilenav a{
+  color: #1d2025;
+  text-decoration: none;
+}
+#mobilenav a:hover,
+#mobilenav a:focus{
+  text-decoration: underline #ff7d1a 3px;
+}
+#mobilenav a:hover::before,
+#mobilenav a:focus::before{
+  content: '~> ';
+  color: #ff7d1a;
+}
+/* ============================================== 
+ All code designing the carousel section actively
+ =============================================== */
+#carousel{
+  position: relative;
+}
+.carousel--navicons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 1em;
+  width: 10%;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 42;
+}.carousel--navicons img{
+  width: 70%;
+}.carousel--navicons:first-of-type{
+  left: 5%;
+  bottom: 40%;
+}
+.carousel--navicons:nth-of-type(2){
+  right: 5%;
+  bottom: 40%;
+}
+
+#main--article{
+  padding: 1em 1.5em;
+}
+#main--article h5{
+  color: #ff7d1a;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+}
+#main--article h1{
+  color: #1d2025;
+  margin-bottom: .8em;
+}
+#main--article p{
+  color: #68707d;
+}
