@@ -36,11 +36,20 @@
       <img src="./images/logo.svg" alt="The sneakers company logo!">
     </div>
     <div class="header--divider">
-      <button class="header--taptargets"><img src="./images/icon-cart.svg" aria-label="Open your cart by clicking on this" alt=""></button> 
+      <button class="header--taptargets" id="cartToggle"><img src="./images/icon-cart.svg" aria-label="Open your cart by clicking on this" alt=""></button> 
       <div id="avatarimagediv"><img src="/images/image-avatar.png" alt="The user's avatar"></div>
     </div>
   </header>
-  <div>
+  <div id="container">
+    <aside id="cartsection">
+      <section>
+        <p>Cart</p>
+      </section>
+      <main id="cartsection--main">
+        <p class="cartpara">Your cart is empty.</p>
+      </main>
+    </aside>
+
     <section id="carousel">
       <button class="carousel--navicons" id="navicon-previous"><img src="./images/icon-previous.svg" alt="" aria-label="Click to see previous image of Contact sneakers"></button>
       <button class="carousel--navicons" id="navicon-next"><img src="./images/icon-next.svg" alt="" aria-label="Click to see next image of Contact sneakers"></button>
@@ -65,7 +74,7 @@
           <p id="calcamount">0</p>
           <button id="calcadd"><img src="./images/icon-plus.svg" alt="" aria-label="Click to increase quantity of items for checkout"></button>
         </div>
-        <button id="main--button">
+        <button id="main--button" class="btn-lg">
           <img src="./images/icon-cart2.svg" alt="" aria-label="Click this icon to add amount selected to cart">
           <p>Add to cart</p>
         </button>
