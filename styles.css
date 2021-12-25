@@ -91,6 +91,9 @@ header{
   content: '~> ';
   color: #ff7d1a;
 }
+#container{
+  position: relative;
+}
 /* ============================================== 
  All code designing the carousel section actively
  =============================================== */
@@ -167,7 +170,7 @@ header{
   font-size: 1.2rem;
   font-weight: 700;
 }
-#main--button{
+.btn-lg{
   width: 100%;
   color: #fff;
   background-color: #ff7d1a;
@@ -186,4 +189,57 @@ header{
 #main--button p{
   font-size: 1.2rem;
   font-weight: 700;
+}
+#cartsection{
+  position: absolute;
+  background-color: #fff;
+  width: 90%;
+  max-width:500px;
+  z-index: 43;
+  top: 2%;
+  right: 5%;
+  border-radius: 8px;
+  display: none;
+  transition: .5s;
+}
+#cartsection section{
+  color: #1d2025;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding:1em 1em .5em;
+  border-bottom: solid .3px #b6bcc8;
+  letter-spacing: .5px;
+}
+#cartsection main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  color: #68707d;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1em;
+}.cartpara{
+  padding: 30% 20%;
+}
+.cartarticle{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 0;
+}.cartarticle div{
+  width: 15%;
+}.cartarticle div img{
+  border-radius: 3px;
+}
+.cartarticle p{
+  font-weight: 400;
+}
+#totalOrder{
+  color: #1d2025;
+  font-weight: 700;
+}
+#cartFilled{
+  display: none;
 }

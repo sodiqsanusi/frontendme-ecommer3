@@ -1,13 +1,16 @@
 const mobileNav =  document.getElementById('mobilenav');
 const navOpenBtn =  document.getElementById('opennav');
 const navCloseBtn =  document.getElementById('closenav');
+const mainArticle = document.getElementById('main');
 navOpenBtn.addEventListener('click', () => {
   mobileNav.style.transform = 'translateX(0)'
   navOpenBtn.style.visibility = 'hidden';
+  mainArticle.style.display = 'none';
 })
 navCloseBtn.addEventListener('click', () => {
   mobileNav.style.transform = 'translateX(-100%)';
   navOpenBtn.style.visibility = 'visible';
+  mainArticle.style.display = 'block';
 })
 const naviconPrev = document.getElementById('navicon-previous');
 const naviconNext = document.getElementById('navicon-next');
@@ -46,9 +49,45 @@ calcSubtract.addEventListener('click',()=>{
   calcAmount.innerHTML = `${amount}`;
 })
 const cartButton = document.getElementById('main--button');
+const cartSectionMain = document.getElementById('cartsection--main')
 let cartAmount = 0;
+const lilac = () =>{
+  const cartBtn = document.getElementById('cartbutton');
+  const cartDelBtn = document.getElementById('cartDeletebutton');
+  cartBtn.addEventListener('click',()=>{
+  cartAmount=0;
+  whatIsInCart(cartAmount);
+  });
+  cartDelBtn.addEventListener('click',()=>{
+    cartAmount=0;
+    whatIsInCart(cartAmount);
+  });
+}
+const whatIsInCart = (amount) => {
+  if(amount == 0) {
+    cartSectionMain.innerHTML = '<p class="cartpara">Your cart is empty.</p>';
+    return;
+  };
+  cartSectionMain.innerHTML = ` <div class="cartarticle">
+  <div><img src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail image of product on cart"></div>
+  <p>Fall Limited Edition Sneakers <br> $125.00 x <span>${amount}</span> <span id="totalOrder">$${125*amount}.00</span> </p>
+  <button id='cartDeletebutton'><img src="./images/icon-delete.svg" alt="" aria-label="Click to delete all orders in cart"></button>
+  </div>
+  <button id="cartbutton" class="btn-lg">Checkout</button>`;
+  lilac();
+}
 cartButton.addEventListener('click', () => {
   cartAmount+=amount;
   amount=0;
   calcAmount.innerHTML = `${amount}`;
+  whatIsInCart(cartAmount);
 })
+const toggleCartBtn = document.getElementById('cartToggle');
+const cart = document.getElementById('cartsection');
+let isCartOpen = false;
+toggleCartBtn.addEventListener('click',() => {
+  isCartOpen = !isCartOpen;
+  isCartOpen ?cart.style.display = 'block' : cart.style.display = 'none' ;
+});
+
+
