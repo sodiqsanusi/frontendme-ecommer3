@@ -32,4 +32,23 @@ naviconNext.addEventListener('click', () => {
     carouselImageSrc.style.filter = 'blur(0)';
   }, 300);
 })
-
+const calcAdd = document.getElementById('calcadd');
+const calcSubtract = document.getElementById('calcsubtract');
+const calcAmount =  document.getElementById('calcamount');
+let amount = 0;
+calcAdd.addEventListener('click',()=>{
+  amount++;
+  calcAmount.innerHTML = `${amount}`;
+})
+calcSubtract.addEventListener('click',()=>{
+  if(amount == 0) return
+  amount--;
+  calcAmount.innerHTML = `${amount}`;
+})
+const cartButton = document.getElementById('main--button');
+let cartAmount = 0;
+cartButton.addEventListener('click', () => {
+  cartAmount+=amount;
+  amount=0;
+  calcAmount.innerHTML = `${amount}`;
+})
