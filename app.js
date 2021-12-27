@@ -2,6 +2,8 @@ const mobileNav =  document.getElementById('mobilenav');
 const navOpenBtn =  document.getElementById('opennav');
 const navCloseBtn =  document.getElementById('closenav');
 const mainArticle = document.getElementById('main');
+const cartItemsNoti = document.getElementById('items-incart');
+const alert = document.getElementById('alert');
 navOpenBtn.addEventListener('click', () => {
   mobileNav.style.transform = 'translateX(0)'
   navOpenBtn.style.visibility = 'hidden';
@@ -57,10 +59,12 @@ const lilac = () =>{
   cartBtn.addEventListener('click',()=>{
   cartAmount=0;
   whatIsInCart(cartAmount);
+  cartItemsNoti.textContent = '';
   });
   cartDelBtn.addEventListener('click',()=>{
     cartAmount=0;
     whatIsInCart(cartAmount);
+    cartItemsNoti.textContent = '';
   });
 }
 const whatIsInCart = (amount) => {
@@ -80,6 +84,7 @@ cartButton.addEventListener('click', () => {
   cartAmount+=amount;
   amount=0;
   calcAmount.innerHTML = `${amount}`;
+  cartItemsNoti.textContent = `${cartAmount}`;
   whatIsInCart(cartAmount);
 })
 const toggleCartBtn = document.getElementById('cartToggle');
