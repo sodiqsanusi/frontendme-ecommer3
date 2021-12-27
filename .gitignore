@@ -16,4 +16,4 @@
 .prettierignore
 design/
 *.md
-!README.md
+!README-template.md
