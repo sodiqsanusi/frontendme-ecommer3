@@ -47,7 +47,6 @@ Users should be able to:
 
 Optimizing code to be fast, high performing and user-friendly was something I'm proud to have learned during this project.
 Identifying and deferring under-the-fold CSS and JS, while making the critical CSS and JS needed always ready was a new thing the project helped me understand.
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
 ### Continued development
 
