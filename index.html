@@ -12,11 +12,6 @@
   <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body> 
 
@@ -33,10 +28,22 @@
   <header id="header">
     <div class="header--divider">
       <button class="header--taptargets" id="opennav" style="width: 15%;"><img src="./images/icon-menu.svg" aria-label="Click to open menu on mobile" alt=""></button>
-      <img src="./images/logo.svg" alt="The sneakers company logo!">
+      <div><img src="./images/logo.svg" alt="The sneakers company logo!"></div>
     </div>
+    <nav id="desktopnav">
+      <ul>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
     <div class="header--divider">
-      <button class="header--taptargets" id="cartToggle"><img src="./images/icon-cart.svg" aria-label="Open your cart by clicking on this" alt=""></button> 
+      <button class="header--taptargets" id="cartToggle">
+        <img src="./images/icon-cart.svg" aria-label="Open your cart by clicking on this" alt="">
+        <span id="items-incart"></span>
+      </button> 
       <div id="avatarimagediv"><img src="/images/image-avatar.png" alt="The user's avatar"></div>
     </div>
   </header>
@@ -54,6 +61,12 @@
       <button class="carousel--navicons" id="navicon-previous"><img src="./images/icon-previous.svg" alt="" aria-label="Click to see previous image of Contact sneakers"></button>
       <button class="carousel--navicons" id="navicon-next"><img src="./images/icon-next.svg" alt="" aria-label="Click to see next image of Contact sneakers"></button>
       <div><img src="./images/image-product-1.jpg" alt="A preview of the sneakers on sale at 40%  off!" id="carousel-image"></div>  
+      <div id="thumbnail-div">
+        <button><img src="./images/image-product-1-thumbnail.jpg" alt="" aria-label="Click to view 1st image of product"></button>
+        <button><img src="./images/image-product-2-thumbnail.jpg" alt="" aria-label="Click to view 2nd image of product"></button>
+        <button><img src="./images/image-product-3-thumbnail.jpg" alt="" aria-label="Click to view 3rd image of product"></button>
+        <button><img src="./images/image-product-4-thumbnail.jpg" alt="" aria-label="Click to view 4th image of product"></button>
+      </div>
     </section>
 
     <main id="main">
@@ -66,7 +79,7 @@
       <section>
         <div id="main--prices">
           <h1>$125.00</h1>
-          <h5>50%</h5>
+          <h2>50%</h2>
           <p>$250.00</p>
         </div>
         <div id="main--calc">
@@ -80,10 +93,6 @@
         </button>
       </section>
     </main> 
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
   <script src="./app.js"></script>
 </body>
