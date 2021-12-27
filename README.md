@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/sodiqsanusi/frontendme-ecommer3/)
-- Live Site URL: [Add live site URL here](https://fallsneakers.netlify.app/)
+- Solution URL: [https://github.com/sodiqsanusi/frontendme-ecommer3/]()
+- Live Site URL: [https://fallsneakers.netlify.app/]()
 
 ## My process
 
@@ -51,14 +51,13 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 So I discovered I'm not really comfortable with the same optimization I learnt a great deal of while building this project so I'll probably learn more about it before diving in my next project two days from now.
 
 ### Useful resources
 
-- [Resource on deferring render blocking resources]https://web.dev/render-blocking-resources/) - This helped me for inlining critical resources and the understanding of how to know which parts of code should be critical or not. I really liked its pattern of explaining and will surely use it while trying to learn more about code optimization.
+- [Resource on deferring render blocking resources](https://web.dev/render-blocking-resources/) - This helped me for inlining critical resources and the understanding of how to know which parts of code should be critical or not. I really liked its pattern of explaining and will surely use it while trying to learn more about code optimization.
 
 
 ## Acknowledgments
 
-Special thanks to the web.dev development team for the numerous articles on web development and to my mentor Raks, you keep me going most times man.
+Special thanks to the web.dev development team for the numerous articles on web development and to my mentor Raks, you keep me going most times man 🐥 .
